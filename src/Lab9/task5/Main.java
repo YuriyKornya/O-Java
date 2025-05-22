@@ -10,5 +10,11 @@ public class Main {
         for (Notification notification : notifications) {
             notification.send("Hello, user!");
         }
+        
+        NotificationReader reader = new NotificationReader();
+        reader.read();
+
+        notifications[0].send("Another email message!");
+        reader.read();
     }
 }

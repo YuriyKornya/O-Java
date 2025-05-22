@@ -1,7 +1,18 @@
 package Lab9.task5;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Notification {
-    void send (String message) {
-        System.out.println("Sending generic notification: " + message);
+public abstract class Notification implements Producer {
+    protected static final List<String> messages = new ArrayList<>();
+
+    @Override
+    public void send(String message) {
+        messages.add(formatMessage(message));
+    }
+
+    protected abstract String formatMessage(String message);
+
+    public static List<String> getMessages() {
+        return messages;
     }
 }
