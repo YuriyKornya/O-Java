@@ -11,7 +11,7 @@ public abstract class Product {
         this.id = id;
     }
 
-    public abstract String getDescription ();
+    public abstract String getDescription();
 
     public void displayInfo() {
         System.out.println("ID: " + id + ", Назва: " + name + ", Ціна: " + price + " грн.");
